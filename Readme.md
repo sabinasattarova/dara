@@ -10,6 +10,9 @@ if you see same functionality name: share the page and communicate with each oth
       Step Definition: FunctionalityName_stepDef_nameInitials.java
       EX:              CustomerInfo_stepDef_WH.java
 
+      GIT branch name: US01_UserName
+      EX:              US12_Warda
+
 # GIT FLOW:
             Branch that we will push changes: develop branch
 - write your codes
