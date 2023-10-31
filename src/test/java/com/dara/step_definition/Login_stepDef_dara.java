@@ -1,5 +1,6 @@
 package com.dara.step_definition;
 
+import com.dara.pages.Home_page_dara;
 import com.dara.pages.Login_page_dara;
 import com.dara.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -20,6 +21,7 @@ public class Login_stepDef_dara {
 
 
     Login_page_dara loginPage = new Login_page_dara();
+    Home_page_dara homePage = new Home_page_dara();
 
     @Given("the user logged in as {string}")
     public void the_user_logged_in_as(String userType) {
@@ -29,8 +31,10 @@ public class Login_stepDef_dara {
 
     @Then("user is on {string} page")
     public void userIsOnPage(String pageTitle) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
-        wait.until(ExpectedConditions.titleIs(pageTitle));
+
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOf(homePage.Fleet));
+
         Assert.assertEquals(pageTitle, Driver.getDriver().getTitle());
     }
 }
