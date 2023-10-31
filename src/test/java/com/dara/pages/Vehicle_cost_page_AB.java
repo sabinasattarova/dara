@@ -19,5 +19,12 @@ public class Vehicle_cost_page_AB {
     @FindBy(xpath = "//a[@class='grid-header-cell__link']")
     public List<WebElement> columns;
 
+    @FindBy(xpath = "(//input[@type='checkbox'])[4]")
+    public WebElement typeCheckbox;
+
+    @FindBy(xpath = "//input[@data-role='select-row-cell']")
+    public List<WebElement> vehicleCostCheckBoxes;
+
+
 
 }

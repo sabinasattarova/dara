@@ -23,11 +23,8 @@ public class Home_page_dara {
     public List<WebElement> fleetTabDropDown;
 
 
+    //span[.='Vehicle Costs']
+    @FindBy(xpath = "//span[.='Vehicle Costs']")
+    public WebElement vehicleCosts;
 
-
-    @FindBy(xpath="(//span[@class='title title-level-1'])[2]")
-    public WebElement Fleet;
-
-    @FindBy(xpath="//span[.='Vehicle Costs']")
-    public WebElement VehicleCosts;
 }
