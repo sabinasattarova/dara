@@ -21,16 +21,16 @@ public class Login_stepDef_dara {
 
     Login_page_dara loginPage = new Login_page_dara();
 
-    @When("user enters the {string} information")
-    public void userEntersTheInformation(String userType) {
+    @Given("the user logged in as {string}")
+    public void the_user_logged_in_as(String userType) {
         loginPage.dynamicLogin(userType);
     }
 
 
-    @Then("user is on Home page")
-    public void userIsOnHomePage() {
+    @Then("user is on {string} page")
+    public void userIsOnPage(String pageTitle) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
-        wait.until(ExpectedConditions.titleIs("Dashboard"));
-        Assert.assertEquals("Dashboard", Driver.getDriver().getTitle());
+        wait.until(ExpectedConditions.titleIs(pageTitle));
+        Assert.assertEquals(pageTitle, Driver.getDriver().getTitle());
     }
 }
