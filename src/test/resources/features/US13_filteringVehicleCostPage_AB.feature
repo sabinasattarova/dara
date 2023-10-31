@@ -16,6 +16,7 @@ Feature: Default
   @B30G16-199
   Scenario: Verify the user checks the first checkbox to check all the Vehicle Costs
     Given the user logged in as "store manager"
+    Then user is on "Dashboard" page
     Then the user selects Vehicle Cost from Fleet module
     And users check the first checkbox to check all the Vehicle Costs
     Then user should seethe  all the Vehicle Costs are checked
