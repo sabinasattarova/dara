@@ -4,7 +4,6 @@ import com.dara.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
@@ -45,9 +44,9 @@ public class MarketingPage_EL {
     })
     public List<WebElement> actualFilterOptions;
 
-    public void clickCheckBox(WebElement checkbox){
+    /*public void clickCheckBox(WebElement checkbox){
         checkbox.click();
-    }
+    }*/
 
     public boolean checkIfChecked(WebElement checkbox){
         return checkbox.isSelected();
