@@ -1,6 +1,8 @@
 package com.dara.pages;
 
 import com.dara.utilities.Driver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Home_page_dara {
@@ -13,5 +15,9 @@ public class Home_page_dara {
 
 
 
+    @FindBy(xpath="(//span[@class='title title-level-1'])[2]")
+    public WebElement Fleet;
 
+    @FindBy(xpath="//span[.='Vehicle Costs']")
+    public WebElement VehicleCosts;
 }
