@@ -22,11 +22,7 @@ public class Vehicle_cost_stepDef_AB {
     Login_page_dara loginPage = new Login_page_dara();
     Home_page_dara homePage = new Home_page_dara();
 
-    @Given("the user logged in as {string}")
-    public void the_user_logged_in_as(String arg0) {
-        loginPage.dynamicLogin(arg0);
 
-    }
     @Then("the user selects Vehicle Cost from Fleet module")
     public void the_user_selects_vehicle_cost_from_fleet_module() {
         Actions actions = new Actions(Driver.getDriver());
