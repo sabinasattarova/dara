@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/dara/step_definition",
         dryRun = false,
-        tags = "@login",
+        tags = "",
         publish = true //generating a report with public link
 )
 
