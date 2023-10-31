@@ -25,5 +25,9 @@ public class Home_page_dara {
 
 
 
+    @FindBy(xpath="(//span[@class='title title-level-1'])[2]")
+    public WebElement Fleet;
 
+    @FindBy(xpath="//span[.='Vehicle Costs']")
+    public WebElement VehicleCosts;
 }
