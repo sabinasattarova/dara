@@ -9,6 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -32,7 +33,7 @@ public class US14_ManagingFiltersSteps {
     @Given("user is on marketing page")
     public void user_is_on_marketing_page() {
         Actions actions = new Actions(Driver.getDriver());
-        BrowserUtils.waitForVisibility(homePageDara.marketingTab, 5);
+        BrowserUtils.waitForInvisibilityOf(Driver.getDriver().findElement(By.xpath("/html/body/div[4]/div")));
         actions.moveToElement(homePageDara.marketingTab).perform();
         homePageDara.marketingPage.click();
     }
