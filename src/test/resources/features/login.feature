@@ -6,5 +6,5 @@ Feature: Users should be able to login
 
 
   Scenario: Login with parameterization
-    When user enters the "store manager" information
-    Then user is on Home page
+    Given the user logged in as "store manager"
+    Then user is on "Dashboard" page
