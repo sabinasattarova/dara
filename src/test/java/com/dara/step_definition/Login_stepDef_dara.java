@@ -33,7 +33,7 @@ public class Login_stepDef_dara {
     public void userIsOnPage(String pageTitle) {
 
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.visibilityOf(homePage.Fleet));
+        wait.until(ExpectedConditions.visibilityOf(homePage.fleetTab));
 
         Assert.assertEquals(pageTitle, Driver.getDriver().getTitle());
     }
