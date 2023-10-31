@@ -13,6 +13,9 @@ if you see same functionality name: share the page and communicate with each oth
       GIT branch name: US01_UserName
       EX:              US12_Warda
 
+      TC in Jira: US#AC# summary
+      EX:         US12AC1 - Users should see 8 filter items on the Accounts page 
+
 # GIT FLOW:
             Branch that we will push changes: develop branch
 - write your codes
