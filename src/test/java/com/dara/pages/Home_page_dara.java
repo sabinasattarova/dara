@@ -26,7 +26,10 @@ public class Home_page_dara {
     @FindBy(xpath = "(//ul[@class='nav-multilevel main-menu']/li)[2]")
     public WebElement fleetTab;
 
-    @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li[2]//ul")
+    @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li[2]//li[9]")
+    public WebElement vehicleModelOption;
+
+    @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li[2]//ul/li")
     public List<WebElement> fleetTabDropDown;
 
 
