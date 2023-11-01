@@ -28,6 +28,9 @@ public class Home_driver_page_dara {
     @FindBy(xpath = "(//span[@class='title title-level-2'])[9]")
     public WebElement calendarEventsTab;
 
+    @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[3]//ul/li")
+    public List<WebElement> activitiesTabDropDown;
+
     public void chooseDropdownOption(WebElement menuTab, List<WebElement> listOfDropdownOptions, String optionToBeChosen){
         Actions action = new Actions(Driver.getDriver());
 
