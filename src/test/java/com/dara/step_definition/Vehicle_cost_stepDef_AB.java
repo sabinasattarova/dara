@@ -71,4 +71,19 @@ public class Vehicle_cost_stepDef_AB {
             Assert.assertTrue(eachCheckBox.isSelected());
         }
     }
+
+    @Given("the user logged in as store manager by entering {string} and {string}")
+    public void theUserLoggedInAsByEnteringAnd( String arg0, String arg1) {
+        loginPage.login(arg0,arg1);
+    }
+
+    @Given("the user logged in as sales manager by entering {string} and {string}")
+    public void theUserLoggedInAsSalesManagerByEnteringAnd(String arg0, String arg1) {
+        loginPage.login(arg0,arg1);
+    }
+
+    @Given("the user logged in as driver by entering {string} and {string}")
+    public void theUserLoggedInAsDriverByEnteringAnd(String arg0, String arg1) {
+        loginPage.login(arg0,arg1);
+    }
 }
