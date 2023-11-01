@@ -15,13 +15,18 @@ public class Home_driver_page_dara {
     public Home_driver_page_dara(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
     @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li[1]//ul/li")
     public List<WebElement> fleetTabDropDown;
 
 
     @FindBy(xpath = "(//ul[@class='nav-multilevel main-menu']/li)[1]")
     public WebElement fleetTab;
+
+    @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[3]")
+    public WebElement activitiesTab;
+
+    @FindBy(xpath = "(//span[@class='title title-level-2'])[9]")
+    public WebElement calendarEventsTab;
 
     public void chooseDropdownOption(WebElement menuTab, List<WebElement> listOfDropdownOptions, String optionToBeChosen){
         Actions action = new Actions(Driver.getDriver());
@@ -36,5 +41,6 @@ public class Home_driver_page_dara {
             }
         }
     }
+
 
 }
