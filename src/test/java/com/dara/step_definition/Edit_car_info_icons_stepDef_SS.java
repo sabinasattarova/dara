@@ -6,24 +6,37 @@ import com.dara.utilities.Driver;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 public class Edit_car_info_icons_stepDef_SS {
     Home_page_dara homePage = new Home_page_dara();
     Actions action = new Actions(Driver.getDriver());
 
+    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20));
+
     @Then("user chooses {string} from Fleet drop-down")
     public void user_chooses_from_fleet_drop_down(String string) {
+
+        wait.until(ExpectedConditions.elementToBeClickable(homePage.fleetTab));
+
+        System.out.println("homePage.fleetTab.getText() = " + homePage.fleetTab.getText());
+
         action.moveToElement(homePage.fleetTab).pause(2000).perform();
 
         for (WebElement each : homePage.fleetTabDropDown) {
-            if (each.getText().contains(string)){
-                System.out.println("each.getText() = " + each.getText());
-                action.moveToElement(each).perform();
+            System.out.println("each.getText() = " + each.getText());
+            if (each.getText().equals(string)){
+                action.moveToElement(each).pause(2000).click().perform();
+                break;
             }
         }
+
+        //action.moveToElement(homePage.vehicleModelOption).pause(2000).click().perform();
     }
     @Then("user hovers over on three dots on car table line following options should appear")
     public void user_hovers_over_on_three_dots_on_car_table_line_following_options_should_appear(io.cucumber.datatable.DataTable dataTable) {
