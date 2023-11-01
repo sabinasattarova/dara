@@ -14,7 +14,7 @@ public class Edit_car_info_icons_stepDef_SS {
     Home_page_dara homePage = new Home_page_dara();
     Actions action = new Actions(Driver.getDriver());
 
-  /*  @Then("user chooses {string} from Fleet drop-down")
+   @Then("user chooses {string} from Fleet drop-down")
     public void user_chooses_from_fleet_drop_down(String string) {
         action.moveToElement(homePage.fleetTab).pause(2000).perform();
 
@@ -24,7 +24,7 @@ public class Edit_car_info_icons_stepDef_SS {
                 action.moveToElement(each).perform();
             }
         }
-    }*/
+    }
     @Then("user hovers over on three dots on car table line following options should appear")
     public void user_hovers_over_on_three_dots_on_car_table_line_following_options_should_appear(io.cucumber.datatable.DataTable dataTable) {
 
