@@ -54,7 +54,7 @@ public class Home_page_dara {
         action.moveToElement(menuTab).pause(2000).perform();
 
         for (WebElement each : listOfDropdownOptions) {
-            System.out.println("each.getText() = " + each.getText());
+            //System.out.println("each.getText() = " + each.getText());
             if (each.getText().equals(optionToBeChosen)){
                 action.moveToElement(each).pause(2000).click().perform();
                 break;
