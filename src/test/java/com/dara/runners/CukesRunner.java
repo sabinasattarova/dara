@@ -14,8 +14,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/dara/step_definition",
-        dryRun = false,
-        tags = "@B30G16-197",
+        dryRun = true,
+        tags = "@B30G16-211",
         publish = true //generating a report with public link
 )
 
