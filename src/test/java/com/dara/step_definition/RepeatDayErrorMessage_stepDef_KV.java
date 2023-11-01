@@ -13,13 +13,13 @@ public class RepeatDayErrorMessage_stepDef_KV {
     @Then("user clicks on Activities")
     public void user_clicks_on_activities() {
 
-        calendarEvents.activitiesTab.click();
+        driverPageDara.activitiesTab.click();
 
     }
     @Then("user clicks on Calendar Events")
     public void user_clicks_on_calendar_events() {
 
-        calendarEvents.calendarEventsTab.click();
+        driverPageDara.calendarEventsTab.click();
 
     }
     @Then("user clicks on Create Calendar Event")

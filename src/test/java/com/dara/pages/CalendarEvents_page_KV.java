@@ -4,11 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class CalendarEvents_page_KV {
-    @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[3]")
-    public WebElement activitiesTab;
-
-    @FindBy(xpath = "(//span[@class='title title-level-2'])[9]")
-    public WebElement calendarEventsTab;
 
     @FindBy(xpath = "//*[@id=\"container\"]/div[2]/div/div/div[2]/div/a")
     public WebElement createCalenderEventTab;
