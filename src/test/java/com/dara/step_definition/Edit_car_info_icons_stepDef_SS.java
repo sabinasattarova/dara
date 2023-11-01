@@ -16,7 +16,7 @@ public class Edit_car_info_icons_stepDef_SS {
 
   /*  @Then("user chooses {string} from Fleet drop-down")
     public void user_chooses_from_fleet_drop_down(String string) {
-        action.moveToElement(homePage.Fleet).pause(2000).perform();
+        action.moveToElement(homePage.fleetTab).pause(2000).perform();
 
         for (WebElement each : homePage.fleetTabDropDown) {
             if (each.getText().contains(string)){
