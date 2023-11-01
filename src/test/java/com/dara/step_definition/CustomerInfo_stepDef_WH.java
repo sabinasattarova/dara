@@ -3,7 +3,6 @@ package com.dara.step_definition;
 import com.dara.pages.CustomerInfo_page_WH;
 import com.dara.utilities.BrowserUtils;
 import com.dara.utilities.Driver;
-import com.google.common.base.Strings;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -21,15 +20,21 @@ public class CustomerInfo_stepDef_WH {
 
     @Then("user clicks on the Customers")
     public void user_clicks_on_the_customers() {
-        BrowserUtils.waitForInvisibilityOf(Driver.getDriver().findElement(By.xpath("/html/body/div[4]/div")));
+     BrowserUtils.waitForInvisibilityOf(Driver.getDriver().findElement(By.xpath("/html/body/div[4]/div")));
         customerInfo.customersElement.click();
 
     }
     @Then("user clicks on the Accounts")
     public void user_clicks_on_the_accounts() {
-    BrowserUtils.waitForInvisibilityOf(Driver.getDriver().findElement(By.xpath("/html/body/div[4]/div")));
+        Actions actions = new Actions(Driver.getDriver());
+        BrowserUtils.waitForInvisibilityOf(Driver.getDriver().findElement(By.xpath("/html/body/div[4]/div")));
+        actions.moveToElement(customerInfo.accountElement).perform();
+        customerInfo.accountElement.click();
+
+
+   /*BrowserUtils.waitForInvisibilityOf(Driver.getDriver().findElement(By.xpath("/html/body/div[4]/div")));
         BrowserUtils.hover(customerInfo.accountElement);
-        BrowserUtils.sleep(2);
+        BrowserUtils.sleep(2);*/
     }
 
 
@@ -40,12 +45,16 @@ public class CustomerInfo_stepDef_WH {
 
     }
     @Then("user sees eight filter items")
-    public void user_sees_eight_filter_items(List<Strings> expectedListOfAccount) {
+    public void user_sees_eight_filter_items(List<String> expectedListOfAccount) {
         Select accounts = new Select(customerInfo.listOfAccount);
+
         List <WebElement> actualListofAccount_WebElement = accounts.getOptions();
+
         List <String> actualListofAccount_String = new ArrayList<>();
+
         for (WebElement eachWebElement : actualListofAccount_WebElement) {
-            actualListofAccount_String.add(eachWebElement.getText());
+
+            actualListofAccount_String.add(eachWebElement.getAttribute("title"));
 
         }
         Assert.assertEquals(expectedListOfAccount,actualListofAccount_String);
