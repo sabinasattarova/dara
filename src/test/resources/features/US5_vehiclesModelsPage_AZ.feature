@@ -43,5 +43,5 @@ Feature: Default
 	Scenario: US5AC2 Verify drivers are not able to access the Vehicle Model page
 		Given the user logged in as "driver"
 		Then user is on "Dashboard" page
-		And user chooses "Vehicles Model" from Fleet drop-down
+		And user chooses "Vehicles Model" from Fleet drop-down as a driver
 		Then verify “You do not have permission to perform this action.” error message is displayed
