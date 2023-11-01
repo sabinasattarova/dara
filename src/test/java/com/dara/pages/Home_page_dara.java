@@ -21,6 +21,8 @@ public class Home_page_dara {
     @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[6]")
     public WebElement marketingTab;
 
+    @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li")
+    public List<WebElement> allModules;
 
 
     // for store manager and sales manager users POM
