@@ -14,7 +14,7 @@ public class Edit_car_info_icons_stepDef_SS {
     Home_page_dara homePage = new Home_page_dara();
     Actions action = new Actions(Driver.getDriver());
 
-    @Then("user chooses {string} from Fleet drop-down")
+   @Then("user chooses {string} from Fleet drop-down")
     public void user_chooses_from_fleet_drop_down(String string) {
         action.moveToElement(homePage.fleetTab).pause(2000).perform();
 
