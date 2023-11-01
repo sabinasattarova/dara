@@ -20,7 +20,7 @@ public class Edit_car_info_icons_stepDef_SS {
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20));
 
     @Then("user chooses {string} from Fleet drop-down")
-    public void user_chooses_from_fleet_drop_down(String string) {
+    public void user_chooses_from_fleet_drop_down(String dropdownOption) {
 
         wait.until(ExpectedConditions.elementToBeClickable(homePage.fleetTab));
 
@@ -30,7 +30,7 @@ public class Edit_car_info_icons_stepDef_SS {
 
         for (WebElement each : homePage.fleetTabDropDown) {
             System.out.println("each.getText() = " + each.getText());
-            if (each.getText().equals(string)){
+            if (each.getText().equals(dropdownOption)){
                 action.moveToElement(each).pause(2000).click().perform();
                 break;
             }
