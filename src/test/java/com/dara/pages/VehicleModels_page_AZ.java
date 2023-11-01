@@ -20,5 +20,11 @@ public class VehicleModels_page_AZ {
     @FindBy (xpath = "//div[.='You do not have permission to perform this action.']")
     public WebElement noPermissionErrorMessage;
 
+    @FindBy(xpath = "//tbody[@class='grid-body']/tr[1]//div[@class='more-bar-holder']/div")
+    public WebElement editDropdownDots;
+
+    @FindBy(xpath = "//tbody[@class='grid-body']/tr[1]//div[@class='more-bar-holder']/div//li[@class='launcher-item']")
+    public List<WebElement> viewEditDeleteOpt;
+
 
 }
