@@ -36,6 +36,7 @@ public class Vehicle_cost_stepDef_AB {
                 wait.until(ExpectedConditions.elementToBeClickable(eachModule));
             }
         }
+
         // Create an Actions object
 
       //  wait.until(ExpectedConditions.elementToBeClickable(homePage.fleetTab));
