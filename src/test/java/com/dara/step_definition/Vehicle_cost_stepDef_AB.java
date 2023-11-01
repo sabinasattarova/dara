@@ -30,17 +30,26 @@ public class Vehicle_cost_stepDef_AB {
         Actions actions = new Actions(Driver.getDriver());
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
 
+        for (WebElement eachModule : homePage.allModules) {
+            if(eachModule.getText().contains("Fleet")){
+                actions.moveToElement(eachModule).perform();
+                wait.until(ExpectedConditions.elementToBeClickable(eachModule));
+            }
+        }
+
         // Create an Actions object
 
-        wait.until(ExpectedConditions.elementToBeClickable(homePage.fleetTab));
+      //  wait.until(ExpectedConditions.elementToBeClickable(homePage.fleetTab));
         // Hover over the element
-        actions.moveToElement(homePage.fleetTab).perform();
+      //  actions.moveToElement(homePage.fleetTab).perform();
         // click the element
         homePage.vehicleCosts.click();
 
     }
     @Then("the user should see the following column names")
     public void the_user_should_see_the_following_column_names(List<String> expectedColumns) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOf(vehicleCostPage.columns.get(1)));
         List<String> actualColumns = new ArrayList<>();
         for (WebElement eachColumn : vehicleCostPage.columns) {
             actualColumns.add(eachColumn.getText());
@@ -61,5 +70,20 @@ public class Vehicle_cost_stepDef_AB {
         for (WebElement eachCheckBox : vehicleCostPage.vehicleCostCheckBoxes) {
             Assert.assertTrue(eachCheckBox.isSelected());
         }
+    }
+
+    @Given("the user logged in as store manager by entering {string} and {string}")
+    public void theUserLoggedInAsByEnteringAnd( String arg0, String arg1) {
+        loginPage.login(arg0,arg1);
+    }
+
+    @Given("the user logged in as sales manager by entering {string} and {string}")
+    public void theUserLoggedInAsSalesManagerByEnteringAnd(String arg0, String arg1) {
+        loginPage.login(arg0,arg1);
+    }
+
+    @Given("the user logged in as driver by entering {string} and {string}")
+    public void theUserLoggedInAsDriverByEnteringAnd(String arg0, String arg1) {
+        loginPage.login(arg0,arg1);
     }
 }
