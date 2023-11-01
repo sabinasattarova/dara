@@ -24,7 +24,9 @@ public class Edit_car_info_icons_stepDef_SS {
 
         wait.until(ExpectedConditions.elementToBeClickable(homePage.fleetTab));
 
-        homePage.chooseDropdownOption(homePage.fleetTab, homePage.fleetTabDropDown, dropdownOption);
+       // homePage.chooseDropdownOption(homePage.marketingTab, homePage.marketingTabDropdown, "Campaigns");
+
+      homePage.chooseDropdownOption(homePage.fleetTab, homePage.fleetTabDropDown, dropdownOption);
 
         //action.moveToElement(homePage.vehicleModelOption).pause(2000).click().perform();
     }

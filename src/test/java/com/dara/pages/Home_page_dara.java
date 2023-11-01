@@ -21,6 +21,9 @@ public class Home_page_dara {
     @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[6]")
     public WebElement marketingTab;
 
+    @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li[6]//ul/li")
+    public List<WebElement> marketingTabDropdown;
+
 
 
     // for store manager and sales manager users POM
@@ -34,6 +37,9 @@ public class Home_page_dara {
 
     @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li[2]//ul/li")
     public List<WebElement> fleetTabDropDown;
+
+    @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li[3]//ul/li")
+    public List<WebElement> customerTabDropdown;
 
 
     //span[.='Vehicle Costs']
