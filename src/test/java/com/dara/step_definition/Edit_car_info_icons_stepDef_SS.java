@@ -24,17 +24,7 @@ public class Edit_car_info_icons_stepDef_SS {
 
         wait.until(ExpectedConditions.elementToBeClickable(homePage.fleetTab));
 
-        System.out.println("homePage.fleetTab.getText() = " + homePage.fleetTab.getText());
-
-        action.moveToElement(homePage.fleetTab).pause(2000).perform();
-
-        for (WebElement each : homePage.fleetTabDropDown) {
-            System.out.println("each.getText() = " + each.getText());
-            if (each.getText().equals(dropdownOption)){
-                action.moveToElement(each).pause(2000).click().perform();
-                break;
-            }
-        }
+        homePage.chooseDropdownOption(homePage.fleetTab, homePage.fleetTabDropDown, dropdownOption);
 
         //action.moveToElement(homePage.vehicleModelOption).pause(2000).click().perform();
     }
