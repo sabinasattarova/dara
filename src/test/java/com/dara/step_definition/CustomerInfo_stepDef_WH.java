@@ -6,6 +6,7 @@ import com.dara.utilities.Driver;
 import com.google.common.base.Strings;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -20,12 +21,15 @@ public class CustomerInfo_stepDef_WH {
 
     @Then("user clicks on the Customers")
     public void user_clicks_on_the_customers() {
+        BrowserUtils.waitForInvisibilityOf(Driver.getDriver().findElement(By.xpath("/html/body/div[4]/div")));
         customerInfo.customersElement.click();
 
     }
     @Then("user clicks on the Accounts")
     public void user_clicks_on_the_accounts() {
+    BrowserUtils.waitForInvisibilityOf(Driver.getDriver().findElement(By.xpath("/html/body/div[4]/div")));
         BrowserUtils.hover(customerInfo.accountElement);
+        BrowserUtils.sleep(2);
     }
 
 
