@@ -26,17 +26,17 @@ public class VehicleModels_stepDef_AZ {
 
     @Then("verify user sees the following columns")
     public void verify_user_sees_the_following_columns(List<String> expectedColumns) {
-//        List<String> text = new ArrayList<>();
-//        for (WebElement each : pageAz.vehicleModelsColumns) {
-//            String actualColumns = each.getText();
-//            text.add(actualColumns);
-//            Assert.assertEquals(expectedColumns,actualColumns);
-//        }
-//
-//        List<String> actualColums = BrowserUtils.getElementsText(pageAz.vehicleModelsColumns);
 
-        // work in progress , codes to edit
-        System.out.println(expectedColumns);
+        List<String> actualModules = new ArrayList<>();
+
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(15));
+        wait.until(ExpectedConditions.titleIs("All - Vehicles Model - Entities - System - Car - Entities - System"));
+
+        for (WebElement eachModule : pageAz.vehicleModelsColumns) {
+           actualModules.add(eachModule.getText());
+        }
+
+        Assert.assertEquals(expectedColumns,actualModules);
 
     }
 
