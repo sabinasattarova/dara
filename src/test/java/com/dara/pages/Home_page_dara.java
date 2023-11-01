@@ -21,9 +21,11 @@ public class Home_page_dara {
     @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[6]")
     public WebElement marketingTab;
 
+    @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li[6]//ul/li")
+    public List<WebElement> marketingTabDropdown;
+
     @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li")
     public List<WebElement> allModules;
-
 
     // for store manager and sales manager users POM
 
@@ -42,6 +44,16 @@ public class Home_page_dara {
     @FindBy(xpath = "//span[.='Vehicle Costs']")
     public WebElement vehicleCosts;
 
+    @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[5]")
+    public WebElement activitiesTab;
+    @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[5]//ul/li")
+    public List<WebElement> activitiesTabDropDown;
+
+
+
+
+
+
     /**
      * This method will click on "Option" that you specify if you provide following parameters:
      * @param menuTab -> WebElement location that in on menu bar
@@ -54,7 +66,7 @@ public class Home_page_dara {
         action.moveToElement(menuTab).pause(2000).perform();
 
         for (WebElement each : listOfDropdownOptions) {
-            //System.out.println("each.getText() = " + each.getText());
+           // System.out.println("each.getText() = " + each.getText());
             if (each.getText().equals(optionToBeChosen)){
                 action.moveToElement(each).pause(2000).click().perform();
                 break;

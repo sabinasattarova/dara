@@ -1,8 +1,11 @@
 package com.dara.utilities;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
@@ -10,6 +13,8 @@ public class Driver {
 
     //create a private constructor to remove access to this object
     private Driver(){}
+
+
 
     /*
     We make the WebDriver private, because we want to close access from outside the class.
@@ -19,6 +24,7 @@ public class Driver {
 
     private static InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
 
+    private static Actions action = new Actions(Driver.getDriver());
     /*
     Create a re-usable utility method which will return the same driver instance once we call it.
     - If an instance doesn't exist, it will create first, and then it will always return same instance.
@@ -73,4 +79,16 @@ public class Driver {
             driverPool.remove();
         }
     }
+
+    public static Actions actions(){
+
+        if (action == null){
+
+            action = new Actions(Driver.getDriver());
+
+        }
+
+        return action;
+    }
+
 }

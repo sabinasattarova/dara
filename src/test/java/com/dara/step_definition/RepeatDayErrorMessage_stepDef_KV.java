@@ -2,16 +2,19 @@ package com.dara.step_definition;
 
 import com.dara.pages.CalendarEvents_page_KV;
 import com.dara.pages.Home_driver_page_dara;
+import com.dara.pages.Home_page_dara;
 import io.cucumber.java.en.Then;
 
 public class RepeatDayErrorMessage_stepDef_KV {
 
     CalendarEvents_page_KV calendarEvents = new CalendarEvents_page_KV();
     Home_driver_page_dara driverPageDara = new Home_driver_page_dara();
+    Home_page_dara homepage = new Home_page_dara();
 
 
     @Then("user clicks on Activities")
     public void user_clicks_on_activities() {
+
 
         driverPageDara.activitiesTab.click();
 
@@ -63,4 +66,10 @@ public class RepeatDayErrorMessage_stepDef_KV {
     }
 
 
+    @Then("{string} clicks on Activities")
+    public void clicksOnActivities(String userType) {
+
+        driverPageDara.chooseDropdownOption(driverPageDara.activitiesTab, driverPageDara.activitiesTabDropDown,"Calendar Events");
+        homepage.chooseDropdownOption(homepage.activitiesTab, homepage.activitiesTabDropDown,"Calendar Events");
+    }
 }

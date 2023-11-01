@@ -9,7 +9,7 @@ Feature: Default
 	Scenario: US9AC1 Verify store manager views error messages for entering invalid integers.
 		Given the user logged in as "store manager"
 		    Then user is on "Dashboard" page
-		    Then user clicks on Activities
+		    Then "store manager" clicks on Activities
 		    Then user clicks on Calendar Events
 		    Then user clicks on Create Calendar Event
 		    Then user clicks on Repeat checkbox 
@@ -23,7 +23,7 @@ Feature: Default
 	Scenario: US9AC1 Verify sales manager views error messages for entering invalid integers.
 		Given the user logged in as "sales manager"
 		    Then user is on "Dashboard" page
-		    Then user clicks on Activities
+		    Then "sales manager" clicks on Activities
 		    Then user clicks on Calendar Events
 		    Then user clicks on Create Calendar Event
 		    Then user clicks on Repeat checkbox 
@@ -37,7 +37,7 @@ Feature: Default
 	Scenario: US9AC1 Verify driver views error messages for entering invalid integers.
 		Given the user logged in as "driver"
 		    Then user is on "Dashboard" page
-		    Then user clicks on Activities
+		    Then "driver" clicks on Activities
 		    Then user clicks on Calendar Events
 		    Then user clicks on Create Calendar Event
 		    Then user clicks on Repeat checkbox 
