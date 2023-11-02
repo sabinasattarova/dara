@@ -31,6 +31,7 @@ public class Edit_car_info_icons_stepDef_SS {
         switch (userType){
             case "driver":
                 driverHomePage.chooseDropdownOption(driverHomePage.fleetTab, driverHomePage.fleetTabDropDown, dropdownOption);
+                break;
             case "sales manager":
             case "store manager":
                 homePage.chooseDropdownOption(homePage.fleetTab, homePage.fleetTabDropDown, dropdownOption);
@@ -40,7 +41,8 @@ public class Edit_car_info_icons_stepDef_SS {
     @Then("user hovers over on three dots on car table line following options should appear")
     public void user_hovers_over_on_three_dots_on_car_table_line_following_options_should_appear(List<String> editOptions) {
 
-        Driver.actions().moveToElement(vehiclesModel.editDropdownDots).perform();
+        //Driver.actions().moveToElement(vehiclesModel.editDropdownDots).perform();
+        BrowserUtils.hover(vehiclesModel.editDropdownDots);
        // System.out.println("vehiclesModel.getEditDropdownOpt() = " + vehiclesModel.getEditDropdownOpt_as_STRING());
 
         Assert.assertEquals(editOptions, vehiclesModel.getEditDropdownOpt_as_STRING());
