@@ -39,14 +39,20 @@ public class VehicleModels_page_AZ {
 
 
 
-    public List<WebElement> getEditDropdownOpt(){
+    public List<String> getEditDropdownOpt_as_STRING(){
 
         List<WebElement> all = new ArrayList<>();
         all.add(viewOpt);
         all.add(editOpt);
         all.add(deleteOpt);
 
-        return all;
+        List<String> eachOpt_as_STRING = new ArrayList<>();
+
+        for (WebElement eachOpt : all) {
+             eachOpt_as_STRING.add(eachOpt.getAttribute("title"));
+        }
+
+        return eachOpt_as_STRING;
     }
 
 

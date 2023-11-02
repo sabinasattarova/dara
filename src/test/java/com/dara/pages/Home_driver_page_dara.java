@@ -31,15 +31,27 @@ public class Home_driver_page_dara {
     @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[3]//ul/li")
     public List<WebElement> activitiesTabDropDown;
 
+    @FindBy(xpath = "//div[.='You do not have permission to perform this action.']")
+    public WebElement error_msg_restriction_to_access_vehicles_model_page;
+
+
+
+
+
+
+
+
+
+
     public void chooseDropdownOption(WebElement menuTab, List<WebElement> listOfDropdownOptions, String optionToBeChosen){
         Actions action = new Actions(Driver.getDriver());
 
-        action.moveToElement(menuTab).pause(2000).perform();
+        action.moveToElement(menuTab).pause(1000).perform();
 
         for (WebElement each : listOfDropdownOptions) {
-            System.out.println("each.getText() = " + each.getText());
+          //  System.out.println("each.getText() = " + each.getText());
             if (each.getText().equals(optionToBeChosen)){
-                action.moveToElement(each).pause(2000).click().perform();
+                action.moveToElement(each).pause(1000).click().perform();
                 break;
             }
         }
