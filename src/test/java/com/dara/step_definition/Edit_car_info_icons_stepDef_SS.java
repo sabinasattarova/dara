@@ -39,7 +39,7 @@ public class Edit_car_info_icons_stepDef_SS {
     @Then("user hovers over on three dots on car table line following options should appear")
     public void user_hovers_over_on_three_dots_on_car_table_line_following_options_should_appear(List<String> expectedEditOptions) {
 
-        Driver.actions().moveToElement(vehiclesModel.editDropdownDots).perform();
+        //Driver.actions().moveToElement(vehiclesModel.editDropdownDots).perform();
 
         List<String> dropdownOpt_as_STRING = new ArrayList<>();
         dropdownOpt_as_STRING.add(vehiclesModel.viewOpt.getAttribute("title"));
