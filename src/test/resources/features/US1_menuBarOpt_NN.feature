@@ -14,7 +14,7 @@ Feature: Default
       | Dashboards           |
       | Fleet                |
       | Customers            |
-      | SaLes                |
+      | Sales                |
       | Activities           |
       | Marketing            |
       | Reports and Segments |
@@ -29,7 +29,7 @@ Feature: Default
       | Dashboards           |
       | Fleet                |
       | Customers            |
-      | SaLes                |
+      | Sales                |
       | Activities           |
       | Marketing            |
       | Reports and Segments |
