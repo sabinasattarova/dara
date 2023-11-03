@@ -16,14 +16,16 @@ public class Vehicle_cost_page_AB {
     public WebElement vehicleCosts;
 
 
+    @FindBy(xpath = "//tr[@class='grid-row row-click-action']/td/input")
+    public List<WebElement> vehicleCostCheckBoxes;
+
+
     @FindBy(xpath = "//a[@class='grid-header-cell__link']")
     public List<WebElement> columns;
 
-    @FindBy(xpath = "(//input[@type='checkbox'])[4]")
-    public WebElement typeCheckbox;
 
-    @FindBy(xpath = "//input[@data-role='select-row-cell']")
-    public List<WebElement> vehicleCostCheckBoxes;
+    @FindBy(xpath = "//button[@class='btn btn-default btn-small dropdown-toggle']//input")
+    public WebElement typeCheckbox;
 
 
 
