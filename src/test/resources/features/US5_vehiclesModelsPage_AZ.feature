@@ -9,7 +9,7 @@ Feature: Default
 	Scenario: US5AC1 Verify store managers see 10 columns on the Vehicle Model page
 		Given the user logged in as "store manager"
 		Then user is on "Dashboard" page
-		And user chooses "Vehicles Model" from Fleet drop-down
+		And "store manager" chooses "Vehicles Model" from Fleet drop-down
 		Then verify user sees the following columns
 			| MODEL NAME               |
 			| MAKE                     |
@@ -26,7 +26,7 @@ Feature: Default
 	Scenario: US5AC1 Verify sales managers see 10 columns on the Vehicle Model page
 		Given the user logged in as "sales manager"
 		Then user is on "Dashboard" page
-		And user chooses "Vehicles Model" from Fleet drop-down
+		And "sales manager" chooses "Vehicles Model" from Fleet drop-down
 		Then verify user sees the following columns
 			| MODEL NAME               |
 			| MAKE                     |
@@ -44,4 +44,4 @@ Feature: Default
 		Given the user logged in as "driver"
 		Then user is on "Dashboard" page
 		And user chooses "Vehicles Model" from Fleet drop-down as a driver
-		Then verify “You do not have permission to perform this action.” error message is displayed
+		Then user sees error msg "You do not have permission to perform this action."
