@@ -34,6 +34,9 @@ public class Home_driver_page_dara {
     @FindBy(xpath = "//div[.='You do not have permission to perform this action.']")
     public WebElement error_msg_restriction_to_access_vehicles_model_page;
 
+    @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li")
+    public List<WebElement> menuBarOpts;
+
 
 
 
