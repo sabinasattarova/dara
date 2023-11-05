@@ -40,13 +40,7 @@ public class VehicleModels_stepDef_AZ {
 
     }
 
-    @Then("verify “You do not have permission to perform this action.” error message is displayed")
-    public void verify_you_do_not_have_permission_to_perform_this_action_error_message_is_displayed() {
 
-
-        Assert.assertTrue(pageAz.noPermissionErrorMessage.isDisplayed());
-
-    }
 
 
     @And("user chooses {string} from Fleet drop-down as a driver")

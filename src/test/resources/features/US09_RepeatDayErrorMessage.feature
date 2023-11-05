@@ -10,12 +10,11 @@ Feature: Default
 		Given the user logged in as "store manager"
 		    Then user is on "Dashboard" page
 		    Then "store manager" clicks on Activities
-		    Then user clicks on Calendar Events
 		    Then user clicks on Create Calendar Event
 		    Then user clicks on Repeat checkbox 
 		    Then user enters integer less than -1
 		    Then user views The value have not to be less than 1 error message
-		    Then user enters integer more than 99
+		    Then user enters integer more than 100
 		    Then user views The value have not to be more than 99 error message	
 
 
@@ -24,12 +23,11 @@ Feature: Default
 		Given the user logged in as "sales manager"
 		    Then user is on "Dashboard" page
 		    Then "sales manager" clicks on Activities
-		    Then user clicks on Calendar Events
 		    Then user clicks on Create Calendar Event
 		    Then user clicks on Repeat checkbox 
 		    Then user enters integer less than -1
 		    Then user views The value have not to be less than 1 error message
-		    Then user enters integer more than 99
+		    Then user enters integer more than 100
 		    Then user views The value have not to be more than 99 error message	
 
 
@@ -38,10 +36,9 @@ Feature: Default
 		Given the user logged in as "driver"
 		    Then user is on "Dashboard" page
 		    Then "driver" clicks on Activities
-		    Then user clicks on Calendar Events
 		    Then user clicks on Create Calendar Event
 		    Then user clicks on Repeat checkbox 
 		    Then user enters integer less than -1
 		    Then user views The value have not to be less than 1 error message
-		    Then user enters integer more than 99
+		    Then user enters integer more than 100
 		    Then user views The value have not to be more than 99 error message

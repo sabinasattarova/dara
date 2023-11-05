@@ -24,7 +24,7 @@ public class Driver {
 
     private static InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
 
-    private static Actions action = new Actions(Driver.getDriver());
+    private static Actions action;
     /*
     Create a re-usable utility method which will return the same driver instance once we call it.
     - If an instance doesn't exist, it will create first, and then it will always return same instance.
@@ -80,7 +80,7 @@ public class Driver {
         }
     }
 
-    public static Actions actions(){
+    public static Actions getActions(){
 
         if (action == null){
 
