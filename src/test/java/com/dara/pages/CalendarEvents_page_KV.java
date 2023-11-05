@@ -29,4 +29,7 @@ public class CalendarEvents_page_KV {
     @FindBy(xpath = "//*[@id=\"temp-validation-name-358-error\"]/span/span")
     public WebElement clearedErrorMessage;
 
+    @FindBy(xpath = "//*[@id=\"tinymce\"]")
+    public WebElement descriptionArea;
+
 }
