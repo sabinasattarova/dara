@@ -50,6 +50,10 @@ public class Home_page_dara {
     public List<WebElement> activitiesTabDropDown;
 
 
+    @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li")
+    public List<WebElement> menuBarOpts;
+
+
 
 
 
