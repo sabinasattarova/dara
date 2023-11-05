@@ -20,6 +20,11 @@ public class VehicleOdomoeter_page_JD {
     public WebElement numberPerPages;
 
 
+    @FindBy(xpath = "")
+    public WebElement vehicleOdometer;
+
+
+
 
 
 

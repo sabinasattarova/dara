@@ -1,10 +1,13 @@
 package com.dara.step_definition;
 
+import com.dara.pages.Home_page_dara;
 import com.dara.pages.VehicleOdomoeter_page_JD;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 
 public class VehicleOdomoeter_stepDef_JD {
+    Home_page_dara homePageDara = new Home_page_dara();
 
     VehicleOdomoeter_page_JD vehicleOdomoeterPageJd = new VehicleOdomoeter_page_JD();
 
@@ -28,4 +31,12 @@ public class VehicleOdomoeter_stepDef_JD {
         String actualPagesPerPage = vehicleOdomoeterPageJd.numberPerPages.getText();
         Assert.assertEquals(expectedPagesPerPage,actualPagesPerPage);
     }
+
+   /* @And("user chooses {string} from Fleet tab")
+    public void userChoosesFromFleetTab(String FleetTab) {
+        homePageDara.fleetTab.click();
+
+
+
+    }*/
 }
