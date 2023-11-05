@@ -23,6 +23,9 @@ public class VehicleOdomoeter_page_JD {
     @FindBy(xpath = "//span[.='Vehicle Odometer']")
     public WebElement vehicleOdometer;
 
+    @FindBy(xpath = "//span[text()='Vehicle Odometer']")
+    public WebElement driverfleetOdometer;
+
 
 
 
