@@ -16,10 +16,13 @@ public class VehicleOdomoeter_stepDef_JD {
 
     @And("user chooses Vehicles Odometer from Fleet drop-down")
     public void userChoosesVehiclesOdometerFromFleetDropDown() {
-        homePageDara.fleetTab.click();
+
         BrowserUtils.waitForInvisibilityOf(Driver.getDriver().findElement(By.xpath("/html/body/div[4]/div")));
+         try{
+       homePageDara.fleetTab.click();
+         }catch (NullPointerException e){homePageDara.fleetTab.click();}
         vehicleOdomoeterPageJd.vehicleOdometer.click();
-        BrowserUtils.waitForInvisibilityOf(Driver.getDriver().findElement(By.xpath("/html/body/div[4]/div")));
+
     }
 
     @Then("user see an error message {string}")
@@ -28,7 +31,6 @@ public class VehicleOdomoeter_stepDef_JD {
         Assert.assertEquals(expectedErrorMessage, actualErrorMessage);
 
     }
-
 
     @Then("the driver should see that the default page is set to {string}")
     public void theDriverShouldSeeThatTheDefaultPageIsSetTo(String expectedPageNumber) {
