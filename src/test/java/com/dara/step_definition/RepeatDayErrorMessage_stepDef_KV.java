@@ -34,6 +34,7 @@ public class RepeatDayErrorMessage_stepDef_KV {
     @Then("user clicks on Repeat checkbox")
     public void user_clicks_on_repeat_checkbox() {
 
+        BrowserUtils.waitForInvisibilityOf(Driver.getDriver().findElement(By.xpath("/html/body/div[4]/div")));
         calendarEvents.repeatCheckBox.click();
 
     }

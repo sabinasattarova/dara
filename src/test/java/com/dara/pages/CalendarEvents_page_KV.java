@@ -11,10 +11,10 @@ public class CalendarEvents_page_KV {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//*[@id=\"container\"]/div[2]/div/div/div[2]/div")
+    @FindBy(xpath = "//a[normalize-space(text())='Create Calendar event']")
     public WebElement createCalenderEventTab;
 
-    @FindBy(xpath = "//*[contains(@id,'recurrence-repeat-view')]")
+    @FindBy(xpath = "(//div[@class='responsive-cell responsive-cell-no-blocks'])[2]/div[2]/div/div[@class='controls']/input")
     public WebElement repeatCheckBox;
 
     @FindBy(xpath = "//label[@data-role='control-section-switcher']/input[@value='1']")
