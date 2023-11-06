@@ -17,7 +17,7 @@ import org.openqa.selenium.interactions.Actions;
 //import java.util.ArrayList;
 import java.util.List;
 
-public class US14_ManagingFiltersSteps {
+public class ManagingFiltersSteps_EL {
 
     Login_page_dara loginPageDara = new Login_page_dara();
     MarketingPage_EL marketingPageEl = new MarketingPage_EL();
