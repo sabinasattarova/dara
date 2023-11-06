@@ -10,7 +10,7 @@ Feature: US4- As a user, I want to access to Vehicle contracts page
 	Scenario: US4AC1 Verify store managers access the Vehicle contracts page
 		Given the user logged in as "store manager"
 		Then user is on "Dashboard" page
-		And user chooses "Vehicle Contracts" from Fleet drop-down
+		And "store manager" chooses "Vehicles Model" from Fleet drop-down
 		Then verify Expected URL: "https://qa.fleetapps.io/entity/Extend_Entity_VehicleContract"
 		Then verify Expected title: "All - Vehicle Contract - Entities - System - Car - Entities - System"	
 
@@ -19,7 +19,7 @@ Feature: US4- As a user, I want to access to Vehicle contracts page
 	Scenario: US4AC2 Verify drivers should not be able to access the Vehicle contracts page
 		Given the user logged in as "driver"
 		Then user is on "Dashboard" page
-		And user chooses "Vehicle Contracts" from Fleet drop-down
+		And "driver" chooses "Vehicles Model" from Fleet drop-down
 		Then verify "You do not have permission to perform this action." error message is displayed	
 
 
@@ -28,6 +28,6 @@ Feature: US4- As a user, I want to access to Vehicle contracts page
 	Scenario: US4AC1 Verify sales managers access the Vehicle contracts page
 		Given the user logged in as "sales manager"
 		Then user is on "Dashboard" page
-		And user chooses "Vehicle Contracts" from Fleet drop-down
+		And "sales manager" chooses "Vehicles Model" from Fleet drop-down
 		Then verify Expected URL: "https://qa.fleetapps.io/entity/Extend_Entity_VehicleContract"
 		Then verify Expected title: "All - Vehicle Contract - Entities - System - Car - Entities - System"
