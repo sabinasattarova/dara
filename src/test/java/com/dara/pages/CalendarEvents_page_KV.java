@@ -9,7 +9,6 @@ public class CalendarEvents_page_KV {
 
     public CalendarEvents_page_KV (){
         PageFactory.initElements(Driver.getDriver(), this);
-
     }
 
     @FindBy(xpath = "//*[@id=\"container\"]/div[2]/div/div/div[2]/div")
@@ -26,4 +25,11 @@ public class CalendarEvents_page_KV {
 
     @FindBy(xpath = "//*[.='The value have not to be more than 99.']")
     public WebElement MoreThan99ErrorMessage;
+
+    @FindBy(xpath = "//*[@id=\"temp-validation-name-358-error\"]/span/span")
+    public WebElement clearedErrorMessage;
+
+    @FindBy(xpath = "//*[@id=\"tinymce\"]")
+    public WebElement descriptionArea;
+
 }
