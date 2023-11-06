@@ -32,4 +32,10 @@ public class CalendarEvents_page_KV {
     @FindBy(xpath = "//*[@id=\"tinymce\"]")
     public WebElement descriptionArea;
 
+    @FindBy(xpath = "//iframe")
+    public WebElement descriptionIframe;
+
+    @FindBy(xpath = "//*[@id=\"tinymce\"]/p")
+    public WebElement descriptionAreaText;
+
 }

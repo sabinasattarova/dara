@@ -24,6 +24,7 @@ public class RepeatDayErrorMessage_stepDef_KV {
     public void user_clicks_on_create_calendar_event() {
 
         BrowserUtils.waitForInvisibilityOf(Driver.getDriver().findElement(By.xpath("/html/body/div[4]/div")));
+
         try {
             calendarEvents.createCalenderEventTab.click();
         }catch (NullPointerException e){
