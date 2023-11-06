@@ -26,7 +26,7 @@ public class Edit_car_info_icons_stepDef_SS {
     @Then("{string} chooses {string} from Fleet drop-down")
     public void chooses_from_fleet_drop_down(String userType, String dropdownOption) {
 
-        wait.until(ExpectedConditions.elementToBeClickable(homePage.fleetTab));
+        BrowserUtils.waitForInvisibilityOf(Driver.getDriver().findElement(By.xpath("/html/body/div[4]/div")));
 
         switch (userType){
             case "driver":

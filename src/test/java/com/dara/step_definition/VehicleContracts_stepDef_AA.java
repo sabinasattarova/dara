@@ -7,6 +7,7 @@ import com.dara.utilities.BrowserUtils;
 import com.dara.utilities.Driver;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -21,7 +22,7 @@ public class VehicleContracts_stepDef_AA {
 
     @Then("verify Expected URL: {string}")
     public void verify_expected_url(String expectedURL) {
-        BrowserUtils.sleep(5);
+        BrowserUtils.waitForInvisibilityOf(Driver.getDriver().findElement(By.xpath("/html/body/div[4]/div")));
         Assert.assertEquals(expectedURL,Driver.getDriver().getCurrentUrl());
 
 
@@ -29,7 +30,7 @@ public class VehicleContracts_stepDef_AA {
     }
     @Then("verify Expected title: {string}")
     public void verify_expected_title(String expectedTitle) {
-        BrowserUtils.sleep(5);
+        BrowserUtils.waitForInvisibilityOf(Driver.getDriver().findElement(By.xpath("/html/body/div[4]/div")));
         Assert.assertEquals(expectedTitle, Driver.getDriver().getTitle());
 
     }
