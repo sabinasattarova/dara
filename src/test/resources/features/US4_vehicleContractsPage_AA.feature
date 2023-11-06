@@ -1,5 +1,5 @@
 @B30G16-227
-Feature: Default
+Feature: US4- As a user, I want to access to Vehicle contracts page
 
 	Background:
 		#@B30G16-187

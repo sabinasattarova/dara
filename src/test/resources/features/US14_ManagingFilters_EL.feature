@@ -1,5 +1,5 @@
 @B30G16-205
-Feature: Default
+Feature: US14- As a user, I want to manage filters on the Marketing page.
 
   Background:
 		#@B30G16-187

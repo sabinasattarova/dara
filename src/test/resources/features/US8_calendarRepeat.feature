@@ -1,4 +1,4 @@
-Feature: Default
+Feature: US8- As a user, I want to create a recurring(repetitive) calendar event.
 
 	Background:
 		#@B30G16-187

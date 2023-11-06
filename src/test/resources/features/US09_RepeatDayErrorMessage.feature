@@ -1,5 +1,5 @@
 @B30G16-210
-Feature: Default
+Feature: US9 As a user, I should see error messages when I enter an invalid integer into the calendar repeat day input box.
 
 	Background:
 		#@B30G16-187

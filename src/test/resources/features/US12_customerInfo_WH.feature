@@ -1,5 +1,5 @@
 @B30G16-197
-Feature: Default
+Feature: US12- As a user, I want to filter customers’ info on the Account page.
 
 	Background:
 		#@B30G16-187

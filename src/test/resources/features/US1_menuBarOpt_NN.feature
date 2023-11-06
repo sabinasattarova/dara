@@ -1,5 +1,5 @@
 @B30G16-249
-Feature: Default
+Feature: US1- As a user, I should be accessing all the main modules of the app.
 
   Background:
 		#@B30G16-187

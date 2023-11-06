@@ -1,5 +1,5 @@
 @B30G16-186
-Feature: Default
+Feature: US3- As a user, I want to learn how to use the pinbar.
 
 	Background:
 		#@B30G16-187

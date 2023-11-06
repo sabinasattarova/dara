@@ -1,5 +1,5 @@
 @B30G16-216
-Feature: Default
+Feature: US7- As a user, I should be able to select any vehicle from the Vehicle page.
 
 	Background:
 		#@B30G16-187

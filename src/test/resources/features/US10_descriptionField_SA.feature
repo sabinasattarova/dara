@@ -1,4 +1,4 @@
-Feature: Default
+Feature: US10- As a user, I want to write the “Description” when I create a calendar event. (Iframe).
 
 	Background:
 		#@B30G16-187

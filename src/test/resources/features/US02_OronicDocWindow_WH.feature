@@ -1,5 +1,5 @@
 @B30G16-237
-Feature: Default
+Feature: US2- As a user, I should be access to the Oroinc Documentation page.
 
 	Background:
 		#@B30G16-187

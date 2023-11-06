@@ -1,5 +1,5 @@
 @B30G16-211
-Feature: Default
+Feature: US5- As a user, I want to view columns on the Vehicle models page.
 
 	Background:
 		#@B30G16-187

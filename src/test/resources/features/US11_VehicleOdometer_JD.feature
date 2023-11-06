@@ -1,5 +1,5 @@
 @B30G16-196
-Feature: Default
+Feature: US11- As a user, I want to view car odometer info on the Vehicles Odometers page.
 
 	Background:
 		#@B30G16-187
