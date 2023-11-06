@@ -11,14 +11,14 @@ Feature: US1- As a user, I should be accessing all the main modules of the app.
     Given the user logged in as "store manager"
     Then user is on "Dashboard" page
     Then the "store manager" should see following menu bar options
-      | Dashboards           |
-      | Fleet                |
-      | Customers            |
-      | Sales                |
-      | Activities           |
-      | Marketing            |
-      | Reports and Segments |
-      | System               |
+      | Dashboards         |
+      | Fleet              |
+      | Customers          |
+      | Sales              |
+      | Activities         |
+      | Marketing          |
+      | Reports & Segments |
+      | System             |
 
 
   @B30G16-231
@@ -26,14 +26,14 @@ Feature: US1- As a user, I should be accessing all the main modules of the app.
     Given the user logged in as "sales manager"
     Then user is on "Dashboard" page
     Then the "sales manager" should see following menu bar options
-      | Dashboards           |
-      | Fleet                |
-      | Customers            |
-      | Sales                |
-      | Activities           |
-      | Marketing            |
-      | Reports and Segments |
-      | System               |
+      | Dashboards         |
+      | Fleet              |
+      | Customers          |
+      | Sales              |
+      | Activities         |
+      | Marketing          |
+      | Reports & Segments |
+      | System             |
 
 
   @B30G16-230

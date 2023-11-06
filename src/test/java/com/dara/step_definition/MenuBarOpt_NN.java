@@ -19,6 +19,8 @@ public class MenuBarOpt_NN {
 
         if (userType.equals("driver")){
             List<String> actualMenuBArOpts = BrowserUtils.getElementsText(driverPage.menuBarOpts);
+            System.out.println(actualMenuBArOpts);
+            System.out.println("driverPage.calendarEventsTab.getText() = " + driverPage.calendarEventsTab.getText());
             Assert.assertEquals(expectedMenuBarOpt, actualMenuBArOpts);
         }else {
             List<String> actualMenuBArOpts = BrowserUtils.getElementsText(homePage.menuBarOpts);

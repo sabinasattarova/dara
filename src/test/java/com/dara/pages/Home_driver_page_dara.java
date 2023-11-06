@@ -4,6 +4,7 @@ import com.dara.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
@@ -34,8 +35,16 @@ public class Home_driver_page_dara {
     @FindBy(xpath = "//div[.='You do not have permission to perform this action.']")
     public WebElement error_msg_restriction_to_access_vehicles_model_page;
 
-    @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li")
+    @FindBys({
+            @FindBy(xpath = "(//span[normalize-space(text())='Fleet'])[1]"),
+            @FindBy(xpath = "(//span[normalize-space(text())='Customers'])[1]"),
+            @FindBy(xpath = "(//span[normalize-space(text())='Activities'])[1]"),
+            @FindBy(xpath = "(//span[normalize-space(text())='System'])[1]"),
+    })
     public List<WebElement> menuBarOpts;
+
+    @FindBy(xpath = "(//span[normalize-space(text())='Fleet'])[1]")
+    public WebElement driverFleetTab;
 
 
 
